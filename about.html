@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Praesidio Management — Luxury Home Management, Northwest Washington</title>
+  <meta name="description" content="Praesidio Management was founded on a single conviction: the finest homes in Northwest Washington deserve a dedicated steward — not a contractor, not a property manager, but a trusted partner who treats your home as their own responsibility." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.praesidiomanagement.com/about" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About Praesidio Management" />
+  <meta property="og:description" content="The story behind Northwest Washington's premier luxury home management company — founded in Bellingham, built on trust." />
+  <meta property="og:url" content="https://www.praesidiomanagement.com/about" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": "https://www.praesidiomanagement.com/about",
+        "name": "About Praesidio Management",
+        "url": "https://www.praesidiomanagement.com/about",
+        "description": "The story, philosophy, and team behind Praesidio Management — Northwest Washington's luxury home management company.",
+        "about": { "@id": "https://www.praesidiomanagement.com/#business" }
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.praesidiomanagement.com/#business",
+        "name": "Praesidio Management",
+        "url": "https://www.praesidiomanagement.com",
+        "description": "Elite subscription-based home management for luxury residences in Northwest Washington.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bellingham",
+          "addressRegion": "WA",
+          "postalCode": "98225",
+          "addressCountry": "US"
+        },
+        "foundingDate": "2025",
+        "areaServed": ["Whatcom County, WA","San Juan County, WA","Skagit County, WA","Island County, WA"]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Tenor+Sans&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    :root {
+      --cream:      #F7F4EE;
+      --warm-white: #FDFCFA;
+      --charcoal:   #1C1C1A;
+      --ink:        #2E2E2B;
+      --muted:      #6B6A65;
+      --pale:       #B8B5AD;
+      --gold:       #A8915A;
+      --gold-light: #C4A96E;
+      --gold-pale:  #EDE3CE;
+      --rule:       rgba(168,145,90,0.25);
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body:    'Jost', sans-serif;
+      --font-label:   'Tenor Sans', sans-serif;
+      --nav-h: 88px;
+      --pad: 100px;
+    }
+
+    body { font-family: var(--font-body); background: var(--warm-white); color: var(--ink); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--cream); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; font-family: inherit; }
+    .label { font-family: var(--font-label); font-size: 10px; letter-spacing: .25em; text-transform: uppercase; color: var(--gold); }
+    .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s cubic-bezier(.22,.68,0,1.2), transform .8s cubic-bezier(.22,.68,0,1.2); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .d1{transition-delay:.1s} .d2{transition-delay:.2s} .d3{transition-delay:.3s}
+    .d4{transition-delay:.4s} .d5{transition-delay:.5s} .d6{transition-delay:.6s}
+
+    /* ── NAV ── */
+    nav { position: fixed; top:0; left:0; right:0; z-index:100; height:var(--nav-h); display:flex; align-items:center; padding:0 60px; transition:background .4s,box-shadow .4s; }
+    nav.scrolled { background:rgba(253,252,250,.96); backdrop-filter:blur(12px); box-shadow:0 1px 0 var(--rule); }
+    .nav-inner { width:100%; display:flex; align-items:center; justify-content:space-between; }
+    .nav-logo { display:flex; flex-direction:column; gap:2px; }
+    .nav-logo-name { font-family:var(--font-display); font-weight:500; font-size:22px; letter-spacing:.04em; color:var(--charcoal); line-height:1; }
+    .nav-logo-tag { font-family:var(--font-label); font-size:8px; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); }
+    .nav-links { display:flex; gap:40px; list-style:none; }
+    .nav-links a { font-family:var(--font-label); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); transition:color .2s; position:relative; }
+    .nav-links a.active { color:var(--charcoal); }
+    .nav-links a::after { content:''; position:absolute; bottom:-3px; left:0; width:0; height:1px; background:var(--gold); transition:width .3s; }
+    .nav-links a:hover { color:var(--charcoal); }
+    .nav-links a:hover::after, .nav-links a.active::after { width:100%; }
+    .nav-cta { font-family:var(--font-label); font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--warm-white); background:var(--charcoal); border:none; padding:13px 28px; transition:background .25s; display:inline-block; }
+    .nav-cta:hover { background:var(--gold); }
+    .hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; padding:4px; }
+    .hamburger span { display:block; width:24px; height:1px; background:var(--charcoal); transition:all .3s; }
+
+    /* ── HERO — full bleed editorial split ── */
+    .about-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 100vh;
+      padding-top: var(--nav-h);
+    }
+    .hero-left {
+      background: var(--charcoal);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 72px 64px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-left::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80&auto=format&fit=crop') center/cover no-repeat;
+      opacity: .22;
+    }
+    /* large watermark numeral */
+    .hero-left::after {
+      content: 'I';
+      position: absolute;
+      bottom: -40px;
+      right: 40px;
+      font-family: var(--font-display);
+      font-size: 320px;
+      font-weight: 300;
+      color: rgba(168,145,90,.08);
+      line-height: 1;
+      pointer-events: none;
+    }
+    .hero-left-content { position: relative; z-index: 1; }
+    .hero-eyebrow { font-family:var(--font-label); font-size:10px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold-light); margin-bottom:20px; display:flex; align-items:center; gap:14px; }
+    .hero-eyebrow::before { content:''; display:block; width:32px; height:1px; background:var(--gold); }
+    .hero-title { font-family:var(--font-display); font-weight:300; font-size:clamp(46px,5.5vw,80px); line-height:1.06; color:var(--warm-white); letter-spacing:-.01em; margin-bottom:28px; }
+    .hero-title em { font-style:italic; color:var(--gold-light); }
+    .hero-body { font-size:15px; font-weight:300; line-height:1.85; color:rgba(253,252,250,.62); max-width:440px; }
+
+    .hero-right {
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 64px;
+      position: relative;
+    }
+    .hero-right-breadcrumb { font-family:var(--font-label); font-size:9px; letter-spacing:.24em; text-transform:uppercase; color:var(--pale); margin-bottom:48px; display:flex; align-items:center; gap:10px; }
+    .hero-right-breadcrumb a { color:var(--pale); transition:color .2s; }
+    .hero-right-breadcrumb a:hover { color:var(--gold); }
+
+    .manifesto { border-left: 2px solid var(--gold); padding-left: 36px; margin-bottom: 56px; }
+    .manifesto-quote { font-family:var(--font-display); font-style:italic; font-size:clamp(22px,2.5vw,32px); font-weight:300; color:var(--charcoal); line-height:1.45; margin-bottom:20px; }
+    .manifesto-attr { font-family:var(--font-label); font-size:9px; letter-spacing:.2em; text-transform:uppercase; color:var(--pale); }
+
+    .hero-right-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--rule); }
+    .h-stat { padding: 24px 28px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .h-stat:nth-child(2n) { border-right: none; }
+    .h-stat:nth-child(3), .h-stat:nth-child(4) { border-bottom: none; }
+    .h-stat-num { font-family:var(--font-display); font-size:44px; font-weight:300; color:var(--charcoal); line-height:1; margin-bottom:4px; }
+    .h-stat-num span { color:var(--gold); }
+    .h-stat-label { font-family:var(--font-label); font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+
+    /* ── ORIGIN STORY ── */
+    .origin { padding: var(--pad) 60px; max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
+    .origin-left {}
+    .origin-num { font-family:var(--font-display); font-size:120px; font-weight:300; color:var(--gold-pale); line-height:.9; margin-bottom:-20px; user-select:none; }
+    .origin-heading { font-family:var(--font-display); font-weight:300; font-size:clamp(36px,4vw,54px); line-height:1.1; color:var(--charcoal); margin-bottom:28px; letter-spacing:-.01em; }
+    .origin-heading em { font-style:italic; color:var(--gold); }
+    .origin-body { font-size:15px; font-weight:300; line-height:1.9; color:var(--muted); margin-bottom:20px; }
+    .origin-right { position:relative; }
+    .origin-img-wrap { padding-top: 130%; overflow:hidden; position:relative; }
+    .origin-img-wrap img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .8s ease; }
+    .origin-img-wrap:hover img { transform:scale(1.04); }
+    .origin-accent { position:absolute; top:-24px; right:-24px; width:120px; height:120px; border-top:1px solid var(--rule); border-right:1px solid var(--rule); z-index:-1; }
+
+    /* ── PHILOSOPHY GRID ── */
+    .philosophy { background:var(--charcoal); padding:var(--pad) 60px; position:relative; overflow:hidden; }
+    .philosophy::before { content:'PRAESIDIO'; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-family:var(--font-display); font-size:clamp(60px,10vw,160px); font-weight:300; color:rgba(168,145,90,.05); white-space:nowrap; pointer-events:none; letter-spacing:.1em; }
+    .philosophy-inner { max-width:1280px; margin:0 auto; position:relative; z-index:1; }
+    .philosophy-header { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:end; margin-bottom:72px; }
+    .phil-heading { font-family:var(--font-display); font-weight:300; font-size:clamp(36px,4vw,54px); line-height:1.1; color:var(--warm-white); }
+    .phil-heading em { font-style:italic; color:var(--gold-light); }
+    .phil-intro { font-size:14px; font-weight:300; line-height:1.85; color:rgba(253,252,250,.5); }
+    .values-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:rgba(168,145,90,.12); }
+    .value-card { background:rgba(255,255,255,.03); padding:44px 36px; transition:background .3s; position:relative; overflow:hidden; }
+    .value-card:hover { background:rgba(255,255,255,.06); }
+    .value-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .4s cubic-bezier(.4,0,.2,1); }
+    .value-card:hover::before { transform:scaleX(1); }
+    .value-num { font-family:var(--font-display); font-size:64px; font-weight:300; color:rgba(168,145,90,.18); line-height:1; margin-bottom:16px; }
+    .value-name { font-family:var(--font-display); font-size:26px; font-weight:400; color:var(--warm-white); margin-bottom:14px; }
+    .value-body { font-size:13px; font-weight:300; line-height:1.85; color:rgba(253,252,250,.48); }
+
+    /* ── WHO WE SERVE ── */
+    .who-serve { padding:var(--pad) 60px; max-width:1280px; margin:0 auto; }
+    .who-header { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; margin-bottom:72px; }
+    .who-heading { font-family:var(--font-display); font-weight:300; font-size:clamp(36px,4vw,54px); line-height:1.1; color:var(--charcoal); }
+    .who-heading em { font-style:italic; color:var(--gold); }
+    .who-intro { font-size:14px; font-weight:300; line-height:1.85; color:var(--muted); }
+    .personas-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:2px; background:var(--rule); }
+    .persona-card { background:var(--warm-white); padding:48px 44px; display:grid; grid-template-columns:auto 1fr; gap:0; position:relative; overflow:hidden; transition:background .3s; }
+    .persona-card:hover { background:var(--cream); }
+    .persona-card::after { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--gold); transform:scaleY(0); transform-origin:bottom; transition:transform .4s cubic-bezier(.4,0,.2,1); }
+    .persona-card:hover::after { transform:scaleY(1); }
+    .persona-inner { grid-column:1/-1; }
+    .persona-label { font-family:var(--font-label); font-size:9px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+    .persona-title { font-family:var(--font-display); font-size:28px; font-weight:400; color:var(--charcoal); margin-bottom:14px; line-height:1.2; }
+    .persona-body { font-size:13px; font-weight:300; line-height:1.85; color:var(--muted); margin-bottom:20px; }
+    .persona-detail { font-size:12px; font-weight:300; color:var(--pale); line-height:1.7; font-style:italic; border-top:1px solid var(--rule); padding-top:14px; }
+
+    /* ── REGION FEATURE ── */
+    .region-section { background:var(--cream); padding:var(--pad) 0; overflow:hidden; position:relative; }
+    .region-inner { max-width:1280px; margin:0 auto; padding:0 60px; display:grid; grid-template-columns:1fr 1fr; gap:0; align-items:stretch; }
+    .region-left { padding-right:80px; display:flex; flex-direction:column; justify-content:center; }
+    .region-heading { font-family:var(--font-display); font-weight:300; font-size:clamp(36px,4vw,54px); line-height:1.1; color:var(--charcoal); margin-bottom:24px; }
+    .region-heading em { font-style:italic; color:var(--gold); }
+    .region-body { font-size:14px; font-weight:300; line-height:1.9; color:var(--muted); margin-bottom:36px; }
+    .region-list { display:flex; flex-direction:column; gap:0; }
+    .region-item { display:flex; align-items:flex-start; gap:16px; padding:14px 0; border-bottom:1px solid var(--rule); }
+    .region-item:last-child { border-bottom:none; }
+    .region-dot { flex-shrink:0; width:8px; height:8px; border-radius:50%; background:var(--gold); margin-top:6px; }
+    .region-item-body { flex:1; }
+    .region-item-name { font-family:var(--font-display); font-size:18px; font-weight:400; color:var(--charcoal); margin-bottom:2px; }
+    .region-item-desc { font-size:12px; font-weight:300; color:var(--muted); line-height:1.6; }
+    .region-right { position:relative; min-height:560px; }
+    .region-img-fill { position:absolute; inset:0; }
+    .region-img-fill img { width:100%; height:100%; object-fit:cover; }
+    /* Overlay vignette */
+    .region-img-fill::after { content:''; position:absolute; inset:0; background:linear-gradient(to right,var(--cream) 0%,transparent 30%); }
+
+    /* ── APPROACH / PROCESS ── */
+    .approach { padding:var(--pad) 60px; max-width:1280px; margin:0 auto; }
+    .approach-header { text-align:center; margin-bottom:72px; }
+    .approach-heading { font-family:var(--font-display); font-weight:300; font-size:clamp(36px,4vw,54px); line-height:1.1; color:var(--charcoal); margin-bottom:16px; }
+    .approach-heading em { font-style:italic; color:var(--gold); }
+    .approach-sub { font-size:14px; font-weight:300; color:var(--muted); max-width:480px; margin:0 auto; line-height:1.8; }
+    .approach-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:0; position:relative; }
+    .approach-steps::before { content:''; position:absolute; top:36px; left:12.5%; right:12.5%; height:1px; background:var(--rule); z-index:0; }
+    .approach-step { text-align:center; padding:0 24px; position:relative; z-index:1; }
+    .step-circle { width:72px; height:72px; border:1px solid var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 28px; background:var(--warm-white); transition:background .3s,border-color .3s; }
+    .step-circle-inner { font-family:var(--font-display); font-size:24px; font-weight:300; color:var(--gold); transition:color .3s; }
+    .approach-step:hover .step-circle { background:var(--gold); }
+    .approach-step:hover .step-circle-inner { color:var(--warm-white); }
+    .step-title { font-family:var(--font-display); font-size:22px; font-weight:400; color:var(--charcoal); margin-bottom:12px; }
+    .step-body { font-size:13px; font-weight:300; color:var(--muted); line-height:1.85; }
+
+    /* ── STANDARDS ── */
+    .standards { background:var(--charcoal); padding:var(--pad) 60px; }
+    .standards-inner { max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1fr 2fr; gap:80px; align-items:start; }
+    .standards-left {}
+    .standards-heading { font-family:var(--font-display); font-weight:300; font-size:clamp(34px,3.5vw,52px); line-height:1.1; color:var(--warm-white); margin-bottom:24px; }
+    .standards-heading em { font-style:italic; color:var(--gold-light); }
+    .standards-body { font-size:14px; font-weight:300; line-height:1.85; color:rgba(253,252,250,.5); margin-bottom:36px; }
+    .btn-standards { font-family:var(--font-label); font-size:10px; letter-spacing:.22em; text-transform:uppercase; background:var(--gold); color:var(--warm-white); border:none; padding:16px 32px; display:inline-block; transition:background .25s,transform .2s; }
+    .btn-standards:hover { background:var(--gold-light); transform:translateY(-1px); }
+    .standards-right {}
+    .standards-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; background:rgba(168,145,90,.1); }
+    .standard-item { background:rgba(255,255,255,.03); padding:36px 32px; transition:background .3s; }
+    .standard-item:hover { background:rgba(255,255,255,.06); }
+    .standard-icon { width:36px; height:36px; color:var(--gold); margin-bottom:18px; }
+    .standard-title { font-family:var(--font-display); font-size:20px; font-weight:400; color:var(--warm-white); margin-bottom:10px; }
+    .standard-body { font-size:12px; font-weight:300; color:rgba(253,252,250,.45); line-height:1.8; }
+
+    /* ── TESTIMONIAL FEATURE ── */
+    .testimonial-feature { padding:var(--pad) 60px; max-width:1280px; margin:0 auto; }
+    .testi-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:2px; background:var(--rule); }
+    .testi-card { background:var(--warm-white); padding:48px 40px; position:relative; transition:background .3s; }
+    .testi-card:hover { background:var(--cream); }
+    .testi-card-large { grid-column:1/3; background:var(--charcoal); }
+    .testi-card-large:hover { background:#242420; }
+    .testi-open { font-family:var(--font-display); font-size:72px; font-weight:300; color:var(--gold-pale); line-height:1; position:absolute; top:16px; left:32px; }
+    .testi-card-large .testi-open { color:rgba(168,145,90,.2); }
+    .testi-body { font-family:var(--font-display); font-style:italic; font-size:19px; font-weight:300; line-height:1.6; color:var(--charcoal); margin-bottom:28px; padding-top:28px; }
+    .testi-card-large .testi-body { font-size:clamp(20px,2.2vw,28px); color:var(--warm-white); }
+    .testi-rule { width:28px; height:1px; background:var(--gold); margin-bottom:14px; }
+    .testi-name { font-family:var(--font-label); font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--charcoal); margin-bottom:3px; }
+    .testi-card-large .testi-name { color:var(--warm-white); }
+    .testi-loc { font-family:var(--font-label); font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:var(--pale); }
+    .testi-card-large .testi-loc { color:rgba(253,252,250,.3); }
+    .testi-small { display:flex; flex-direction:column; justify-content:center; }
+    .testi-small .testi-body { font-size:16px; }
+
+    /* ── CTA ── */
+    .about-cta { padding:120px 60px; text-align:center; position:relative; overflow:hidden; background: linear-gradient(rgba(28,28,26,.88),rgba(28,28,26,.88)), url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1600&q=80&auto=format&fit=crop') center/cover; }
+    .about-cta-inner { max-width:680px; margin:0 auto; position:relative; z-index:1; }
+    .cta-heading { font-family:var(--font-display); font-weight:300; font-size:clamp(36px,5vw,60px); color:var(--warm-white); line-height:1.1; margin-bottom:24px; }
+    .cta-heading em { font-style:italic; color:var(--gold-light); }
+    .cta-body { font-size:14px; font-weight:300; line-height:1.85; color:rgba(253,252,250,.55); max-width:480px; margin:0 auto 48px; }
+    .cta-actions { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+    .btn-cta { font-family:var(--font-label); font-size:10px; letter-spacing:.22em; text-transform:uppercase; padding:17px 40px; display:inline-block; transition:all .25s; }
+    .btn-cta-gold { background:var(--gold); color:var(--warm-white); border:none; }
+    .btn-cta-gold:hover { background:var(--gold-light); transform:translateY(-1px); }
+    .btn-cta-outline { color:var(--warm-white); border:1px solid rgba(253,252,250,.25); background:none; }
+    .btn-cta-outline:hover { border-color:var(--gold); color:var(--gold); }
+
+    /* ── FOOTER ── */
+    footer { background:var(--charcoal); padding:80px 60px 40px; border-top:1px solid rgba(168,145,90,.12); }
+    .footer-inner { max-width:1280px; margin:0 auto; }
+    .footer-top { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:60px; margin-bottom:64px; }
+    .footer-logo-name { font-family:var(--font-display); font-size:26px; font-weight:400; color:var(--warm-white); margin-bottom:4px; }
+    .footer-logo-tag { font-family:var(--font-label); font-size:8px; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; }
+    .footer-tagline { font-size:13px; font-weight:300; line-height:1.85; color:rgba(253,252,250,.4); max-width:280px; margin-bottom:24px; }
+    .footer-contact { display:flex; flex-direction:column; gap:6px; }
+    .footer-contact a { font-family:var(--font-label); font-size:10px; letter-spacing:.14em; color:rgba(253,252,250,.4); transition:color .2s; }
+    .footer-contact a:hover { color:var(--gold); }
+    .footer-col-title { font-family:var(--font-label); font-size:9px; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; }
+    .footer-links { list-style:none; display:flex; flex-direction:column; gap:12px; }
+    .footer-links a { font-size:13px; font-weight:300; color:rgba(253,252,250,.4); transition:color .2s; }
+    .footer-links a:hover { color:var(--gold-light); }
+    .footer-bottom { border-top:1px solid rgba(168,145,90,.12); padding-top:32px; display:flex; justify-content:space-between; align-items:center; }
+    .footer-copy { font-size:12px; font-weight:300; color:rgba(253,252,250,.25); }
+    .footer-legal { display:flex; gap:24px; }
+    .footer-legal a { font-size:11px; font-weight:300; color:rgba(253,252,250,.25); transition:color .2s; }
+    .footer-legal a:hover { color:var(--gold); }
+
+    /* ── MOBILE NAV ── */
+    .mobile-nav { display:none; position:fixed; inset:0; background:var(--charcoal); z-index:200; flex-direction:column; justify-content:center; align-items:center; gap:40px; opacity:0; transition:opacity .3s; }
+    .mobile-nav.open { display:flex; opacity:1; }
+    .mobile-nav-close { position:absolute; top:28px; right:28px; background:none; border:none; color:var(--warm-white); font-size:28px; cursor:pointer; }
+    .mobile-nav a { font-family:var(--font-display); font-size:36px; font-weight:300; color:var(--warm-white); transition:color .2s; }
+    .mobile-nav a:hover { color:var(--gold-light); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width:1024px) {
+      :root { --pad:72px; }
+      nav { padding:0 36px; }
+      .nav-links { display:none; }
+      .hamburger { display:flex; }
+      .about-hero { grid-template-columns:1fr; min-height:auto; }
+      .hero-left { min-height:70vh; padding:80px 36px 64px; }
+      .hero-right { padding:56px 36px; }
+      .origin { grid-template-columns:1fr; gap:48px; padding:72px 36px; }
+      .origin-right { max-width:520px; }
+      .philosophy { padding:72px 36px; }
+      .philosophy-header { grid-template-columns:1fr; gap:24px; }
+      .values-grid { grid-template-columns:1fr; }
+      .who-serve { padding:72px 36px; }
+      .who-header { grid-template-columns:1fr; gap:24px; }
+      .personas-grid { grid-template-columns:1fr; }
+      .region-inner { grid-template-columns:1fr; padding:0 36px; }
+      .region-left { padding-right:0; padding-bottom:48px; }
+      .region-right { min-height:360px; }
+      .region-img-fill::after { background:linear-gradient(to bottom,var(--cream) 0%,transparent 20%); }
+      .approach { padding:72px 36px; }
+      .approach-steps { grid-template-columns:repeat(2,1fr); }
+      .approach-steps::before { display:none; }
+      .approach-step { padding:0 0 40px; }
+      .standards { padding:72px 36px; }
+      .standards-inner { grid-template-columns:1fr; gap:48px; }
+      .standards-grid { grid-template-columns:1fr 1fr; }
+      .testimonial-feature { padding:72px 36px; }
+      .testi-grid { grid-template-columns:1fr; }
+      .testi-card-large { grid-column:1/-1; }
+      .about-cta { padding:80px 36px; }
+      footer { padding:60px 36px 32px; }
+      .footer-top { grid-template-columns:1fr 1fr; gap:40px; }
+      .footer-bottom { flex-direction:column; gap:16px; text-align:center; }
+    }
+    @media (max-width:600px) {
+      .hero-right-stats { grid-template-columns:1fr 1fr; }
+      .standards-grid { grid-template-columns:1fr; }
+      .footer-top { grid-template-columns:1fr; }
+      .cta-actions { flex-direction:column; }
+      .btn-cta { text-align:center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-name">Praesidio</span>
+        <span class="nav-logo-tag">Home Management</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Membership</a></li>
+        <li><a href="index.html#areas">Areas Served</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <a href="index.html#contact" class="nav-cta">Inquire</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" id="mobileNavClose">&times;</button>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Membership</a>
+    <a href="index.html#areas">Areas Served</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+
+  <main>
+
+    <!-- ══════════════════════════════
+         HERO — EDITORIAL SPLIT
+    ══════════════════════════════ -->
+    <section class="about-hero" aria-label="About Praesidio">
+      <div class="hero-left">
+        <div class="hero-left-content">
+          <div class="hero-eyebrow reveal">Founded in Bellingham, Washington</div>
+          <h1 class="hero-title reveal d1">
+            We guard what<br>matters <em>most</em><br>to you.
+          </h1>
+          <p class="hero-body reveal d2">
+            Praesidio — from the Latin <em>praesidium</em>: to guard, to protect, to stand watch. It is not just our name. It is our operating principle.
+          </p>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-right-breadcrumb reveal">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span style="color:var(--ink);">About</span>
+        </div>
+        <div class="manifesto reveal d1">
+          <p class="manifesto-quote">"The finest homes in Northwest Washington deserve more than a contractor and a phone number. They deserve someone who takes personal responsibility for their condition — every single day."</p>
+          <div class="manifesto-attr">— Founding conviction, Praesidio Management</div>
+        </div>
+        <div class="hero-right-stats reveal d2" aria-label="Company at a glance">
+          <div class="h-stat">
+            <div class="h-stat-num">4<span> counties</span></div>
+            <div class="h-stat-label">Service territory</div>
+          </div>
+          <div class="h-stat">
+            <div class="h-stat-num">24<span>h</span></div>
+            <div class="h-stat-label">Emergency response</div>
+          </div>
+          <div class="h-stat">
+            <div class="h-stat-num">20<span>+</span></div>
+            <div class="h-stat-label">Trade categories covered</div>
+          </div>
+          <div class="h-stat">
+            <div class="h-stat-num">$0</div>
+            <div class="h-stat-label">Vendor markup — ever</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         ORIGIN STORY
+    ══════════════════════════════ -->
+    <section class="origin" aria-labelledby="origin-heading">
+      <div class="origin-left">
+        <div class="origin-num reveal" aria-hidden="true">01</div>
+        <h2 class="origin-heading reveal d1" id="origin-heading">
+          A problem we saw<br>no one was <em>solving.</em>
+        </h2>
+        <p class="origin-body reveal d2">
+          Northwest Washington is home to some of the Pacific Northwest's most beautiful properties — waterfront estates on the San Juan Islands, bluff homes overlooking Puget Sound, custom builds tucked into the Skagit Valley foothills. And nearly every owner of these properties shares the same quiet frustration: there is no one to trust with them.
+        </p>
+        <p class="origin-body reveal d2">
+          The options available were a fragmented patchwork: a handyman here, a landscaper there, a property manager who specialized in rentals. No one who treated the home as a whole. No one accountable for its condition. No one who knew it the way its owner did — or better.
+        </p>
+        <p class="origin-body reveal d2">
+          Praesidio was built to be that person. We started with a simple model: a flat monthly membership, a vetted network of the best tradespeople in the region, and a commitment to knowing every member's home as thoroughly as they do. We don't manage rental units. We don't flip houses. We care for homes — and we take that responsibility personally.
+        </p>
+      </div>
+      <div class="origin-right reveal d3">
+        <div class="origin-accent" aria-hidden="true"></div>
+        <div class="origin-img-wrap">
+          <img src="https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?w=800&q=80&auto=format&fit=crop" alt="Pacific Northwest waterfront estate — the kind of home Praesidio serves" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         PHILOSOPHY / VALUES
+    ══════════════════════════════ -->
+    <section class="philosophy" aria-labelledby="values-heading">
+      <div class="philosophy-inner">
+        <div class="philosophy-header">
+          <div>
+            <span class="label reveal" style="display:block;margin-bottom:16px;">What we believe</span>
+            <h2 class="phil-heading reveal d1" id="values-heading">
+              Five principles that<br>guide every decision<br>we <em>make for you.</em>
+            </h2>
+          </div>
+          <p class="phil-intro reveal d2">These are not marketing statements. They are operating constraints — the rules we hold ourselves to even when they are inconvenient, and the reason our members trust us with their most valuable assets.</p>
+        </div>
+        <div class="values-grid" role="list">
+
+          <div class="value-card reveal" role="listitem">
+            <div class="value-num" aria-hidden="true">01</div>
+            <h3 class="value-name">Transparency above all</h3>
+            <p class="value-body">We will never spend a dollar of your money without your knowledge. We will never mark up a vendor invoice. We will never recommend a service you don't need. If something goes wrong, you will hear about it from us — before you notice it yourself.</p>
+          </div>
+
+          <div class="value-card reveal d1" role="listitem">
+            <div class="value-num" aria-hidden="true">02</div>
+            <h3 class="value-name">Proactive, not reactive</h3>
+            <p class="value-body">A roof that leaks is expensive. A roof we caught before it leaked is a $400 repair. We are not a repair service you call after something breaks. We are the reason things don't break in the first place — and when they do, we're already there.</p>
+          </div>
+
+          <div class="value-card reveal d2" role="listitem">
+            <div class="value-num" aria-hidden="true">03</div>
+            <h3 class="value-name">Your home knows us</h3>
+            <p class="value-body">We maintain detailed records of every system, every vendor, every repair, every inspection for every property we manage. When you call us about your boiler, we already know when it was last serviced, who serviced it, and what it's due for next.</p>
+          </div>
+
+          <div class="value-card reveal" role="listitem">
+            <div class="value-num" aria-hidden="true">04</div>
+            <h3 class="value-name">Only the best tradespeople</h3>
+            <p class="value-body">We don't use contractors we wouldn't put in our own homes. Every vendor in the Praesidio network has been licensed-verified, insured, background-checked, and personally evaluated. We maintain these relationships actively — and remove vendors who don't meet our standard.</p>
+          </div>
+
+          <div class="value-card reveal d1" role="listitem">
+            <div class="value-num" aria-hidden="true">05</div>
+            <h3 class="value-name">Fewer clients, deeper care</h3>
+            <p class="value-body">We deliberately limit the number of properties we accept. This is not a scalability play — it is a quality commitment. Every member deserves a team that genuinely knows their home. When we are at capacity, we are at capacity.</p>
+          </div>
+
+          <!-- Spacer card with CTA -->
+          <div class="value-card reveal d2" style="display:flex;flex-direction:column;justify-content:flex-end;" role="listitem">
+            <div style="font-family:var(--font-display);font-style:italic;font-size:28px;font-weight:300;color:rgba(253,252,250,.25);line-height:1.4;margin-bottom:32px;">"A home is not a transaction. It is a relationship."</div>
+            <a href="services.html" style="font-family:var(--font-label);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px;transition:gap .3s;" onmouseover="this.style.gap='20px'" onmouseout="this.style.gap='12px'">
+              Explore our services
+              <svg width="24" height="1" style="overflow:visible" viewBox="0 0 24 1"><line x1="0" y1="0" x2="24" y2="0" stroke="currentColor" stroke-width="1"/><path d="M20 -4 L24 0 L20 4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         WHO WE SERVE
+    ══════════════════════════════ -->
+    <section class="who-serve" aria-labelledby="who-heading">
+      <div class="who-header">
+        <div>
+          <span class="label reveal" style="display:block;margin-bottom:16px;">Our members</span>
+          <h2 class="who-heading reveal d1" id="who-heading">
+            Built for homeowners<br>who expect <em>more.</em>
+          </h2>
+        </div>
+        <p class="who-intro reveal d2">Praesidio is not for everyone — and we mean that honestly. We are for the homeowner who values quality of care over price, who wants to be able to trust completely, and who understands that exceptional service has a cost worth paying.</p>
+      </div>
+      <div class="personas-grid">
+
+        <article class="persona-card reveal">
+          <div class="persona-inner">
+            <div class="persona-label">Member profile</div>
+            <h3 class="persona-title">The full-time primary resident</h3>
+            <p class="persona-body">You own a home valued at $700K or more in Whatcom or Skagit County. You travel frequently for work, have a demanding schedule, or simply want your home maintained to a standard that requires professional oversight. You've had bad experiences with contractors who don't show up, don't perform, or overcharge. You want one number to call and one person who knows your home.</p>
+            <p class="persona-detail">Typically starts with Essential or Premier. Values the tradesman network and the 24-hour response guarantee above all else.</p>
+          </div>
+        </article>
+
+        <article class="persona-card reveal d1">
+          <div class="persona-inner">
+            <div class="persona-label">Member profile</div>
+            <h3 class="persona-title">The vacation &amp; second homeowner</h3>
+            <p class="persona-body">Your property on Orcas Island, Whidbey, or Camano sits empty for 8–10 months of the year. You arrive to find burst pipes, pest damage, or deferred maintenance that's turned into a $15,000 bill. You want someone who watches your property year-round, prepares it for your arrival, and closes it down properly when you leave — without requiring your presence to manage any of it.</p>
+            <p class="persona-detail">The highest-value segment for Praesidio. Typically Premier or Estate. The ROI on professional management versus emergency repair costs is immediate and obvious.</p>
+          </div>
+        </article>
+
+        <article class="persona-card reveal">
+          <div class="persona-inner">
+            <div class="persona-label">Member profile</div>
+            <h3 class="persona-title">The estate &amp; multi-property owner</h3>
+            <p class="persona-body">You own multiple properties — a primary Bellingham residence, a San Juan Islands retreat, perhaps a family property in Anacortes. The complexity of managing multiple homes across multiple counties, each with its own vendors, systems, and seasonal needs, has become genuinely unmanageable without professional help. You want a single, trusted partner across all of them.</p>
+            <p class="persona-detail">Estate membership, custom-scoped. One house manager, consolidated reporting, unified vendor network. This is the member for whom Praesidio becomes a genuine operating partner.</p>
+          </div>
+        </article>
+
+        <article class="persona-card reveal d1">
+          <div class="persona-inner">
+            <div class="persona-label">Member profile</div>
+            <h3 class="persona-title">The out-of-state inheritor</h3>
+            <p class="persona-body">You inherited or purchased a property in Northwest Washington but live in California, Texas, or elsewhere. You cannot be on-site to manage it, but you cannot afford to let it deteriorate. You need a trusted local partner who acts as your eyes, your voice, and your decision-maker on the ground — someone accountable enough that you can genuinely stop worrying.</p>
+            <p class="persona-detail">Frequently starts with Premier. The peace of mind factor is the primary driver — the ability to hand over responsibility completely and trust it will be honored.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         THE REGION
+    ══════════════════════════════ -->
+    <section class="region-section" aria-labelledby="region-heading">
+      <div class="region-inner">
+        <div class="region-left">
+          <span class="label reveal" style="display:block;margin-bottom:16px;">Our territory</span>
+          <h2 class="region-heading reveal d1" id="region-heading">
+            We know this region<br><em>deeply.</em>
+          </h2>
+          <p class="region-body reveal d2">Northwest Washington is not one place — it is a collection of distinct communities, each with its own character, its own climate challenges, and its own property landscape. We have built our vendor network, our knowledge, and our operations specifically for this geography.</p>
+          <div class="region-list reveal d3">
+            <div class="region-item">
+              <div class="region-dot" aria-hidden="true"></div>
+              <div class="region-item-body">
+                <div class="region-item-name">Whatcom County</div>
+                <div class="region-item-desc">Our home. Bellingham, Ferndale, Lynden, Blaine, Semiahmoo, Sudden Valley, Birch Bay — the full county is our primary operating area.</div>
+              </div>
+            </div>
+            <div class="region-item">
+              <div class="region-dot" aria-hidden="true"></div>
+              <div class="region-item-body">
+                <div class="region-item-name">San Juan Islands</div>
+                <div class="region-item-desc">Orcas, San Juan, Lopez, Shaw, and Fidalgo Island. We build ferry logistics into every service plan. Island property is our specialty.</div>
+              </div>
+            </div>
+            <div class="region-item">
+              <div class="region-dot" aria-hidden="true"></div>
+              <div class="region-item-body">
+                <div class="region-item-name">Skagit County</div>
+                <div class="region-item-desc">Anacortes waterfront estates, Mount Vernon, Burlington, and La Conner. The Skagit corridor expands our reach south along the I-5 axis.</div>
+              </div>
+            </div>
+            <div class="region-item">
+              <div class="region-dot" aria-hidden="true"></div>
+              <div class="region-item-body">
+                <div class="region-item-name">Island County</div>
+                <div class="region-item-desc">Whidbey Island's bluff estates and Camano Island's drive-on retreats. Strong second-home character throughout both islands.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="region-right" aria-hidden="true">
+          <div class="region-img-fill">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=80&auto=format&fit=crop" alt="Pacific Northwest coastal landscape — San Juan Islands" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         HOW WE WORK
+    ══════════════════════════════ -->
+    <section class="approach" aria-labelledby="approach-heading">
+      <div class="approach-header">
+        <span class="label reveal" style="display:block;margin-bottom:16px;">How we work</span>
+        <h2 class="approach-heading reveal d1" id="approach-heading">
+          From first meeting<br>to <em>lifetime stewardship.</em>
+        </h2>
+        <p class="approach-sub reveal d2">Every Praesidio relationship begins with a genuine commitment to learn your home — and that learning never stops.</p>
+      </div>
+      <div class="approach-steps">
+        <div class="approach-step reveal">
+          <div class="step-circle"><span class="step-circle-inner">I</span></div>
+          <h3 class="step-title">Consultation</h3>
+          <p class="step-body">We meet at your property. We walk every room, every system, every exterior element. We listen to your concerns and your priorities. No obligation, no fee — just a genuine conversation about what your home needs.</p>
+        </div>
+        <div class="approach-step reveal d1">
+          <div class="step-circle"><span class="step-circle-inner">II</span></div>
+          <h3 class="step-title">Assessment</h3>
+          <p class="step-body">Our team conducts a thorough baseline documentation of your property — condition, systems, deferred maintenance, and seasonal risks. This becomes the foundation of everything we do for you going forward.</p>
+        </div>
+        <div class="approach-step reveal d2">
+          <div class="step-circle"><span class="step-circle-inner">III</span></div>
+          <h3 class="step-title">Membership begins</h3>
+          <p class="step-body">Your membership activates. Your point of contact is introduced. Your property enters our care. From this day forward, your home has a professional who knows it — and is accountable for it.</p>
+        </div>
+        <div class="approach-step reveal d3">
+          <div class="step-circle"><span class="step-circle-inner">IV</span></div>
+          <h3 class="step-title">Ongoing stewardship</h3>
+          <p class="step-body">Scheduled visits, proactive maintenance, vendor coordination, emergency response, monthly reporting. The relationship deepens as we learn your home, your preferences, and how to serve you best over time.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         STANDARDS
+    ══════════════════════════════ -->
+    <section class="standards" aria-labelledby="standards-heading">
+      <div class="standards-inner">
+        <div class="standards-left reveal">
+          <span class="label" style="display:block;margin-bottom:16px;color:var(--gold);">How we hire &amp; vet</span>
+          <h2 class="standards-heading" id="standards-heading">
+            Our tradesman<br>standard is <em>absolute.</em>
+          </h2>
+          <p class="standards-body">The Praesidio vendor network is the product. Every person who enters a member's home has been personally evaluated by our team — not algorithmically matched, not crowd-sourced, not pulled from a directory. We know who they are, we know their work, and we stand behind them.</p>
+          <a href="services.html" class="btn-standards">See How It Works</a>
+        </div>
+        <div class="standards-right">
+          <div class="standards-grid">
+
+            <div class="standard-item reveal d1">
+              <svg class="standard-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 4l4 8 9 1.3-6.5 6.3 1.5 9L18 24l-8 4.6 1.5-9L5 13.3 14 12z"/>
+              </svg>
+              <h3 class="standard-title">License verification</h3>
+              <p class="standard-body">Every contractor's license is verified active with the Washington State Department of Labor &amp; Industries before they enter any member property. We recheck annually.</p>
+            </div>
+
+            <div class="standard-item reveal d2">
+              <svg class="standard-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="6" y="8" width="24" height="20" rx="2"/><path d="M6 14h24M13 8V4M23 8V4M12 20h5M12 24h8"/>
+              </svg>
+              <h3 class="standard-title">Insurance confirmation</h3>
+              <p class="standard-body">General liability and workers' compensation certificates are on file for every vendor. Coverage amounts are reviewed against the scope of work they perform.</p>
+            </div>
+
+            <div class="standard-item reveal">
+              <svg class="standard-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="18" cy="12" r="6"/><path d="M6 32c0-7 5.4-12 12-12s12 5 12 12"/>
+                <path d="M24 20l3 3-3 3"/>
+              </svg>
+              <h3 class="standard-title">Background checks</h3>
+              <p class="standard-body">All personnel who will be unsupervised in member properties undergo background checks. Our protocol exceeds standard residential screening requirements.</p>
+            </div>
+
+            <div class="standard-item reveal d1">
+              <svg class="standard-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M8 28l6-6 5 5 10-14"/><circle cx="28" cy="8" r="4"/>
+              </svg>
+              <h3 class="standard-title">Personal evaluation</h3>
+              <p class="standard-body">We have personally used, evaluated, and worked alongside every vendor in our network. References are checked. Past work is inspected. Our approval is not administrative — it is personal.</p>
+            </div>
+
+            <div class="standard-item reveal d2">
+              <svg class="standard-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 4v8M18 24v8M4 18h8M24 18h8M7.8 7.8l5.6 5.6M22.6 22.6l5.6 5.6M7.8 28.2l5.6-5.6M22.6 13.4l5.6-5.6"/>
+              </svg>
+              <h3 class="standard-title">Active performance monitoring</h3>
+              <p class="standard-body">We track vendor performance across every job — on-time arrival, scope adherence, quality, and member feedback. Vendors who fall below our standard are removed from the network.</p>
+            </div>
+
+            <div class="standard-item reveal d3">
+              <svg class="standard-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M10 18l6 6 10-12"/><rect x="4" y="4" width="28" height="28" rx="3"/>
+              </svg>
+              <h3 class="standard-title">Zero tolerance on conduct</h3>
+              <p class="standard-body">Any vendor who disrespects a member's home, misrepresents their work, or violates our conduct standards is immediately and permanently removed — regardless of their technical skill.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         TESTIMONIALS
+    ══════════════════════════════ -->
+    <section class="testimonial-feature" aria-labelledby="testi-heading">
+      <div style="text-align:center;margin-bottom:64px;">
+        <span class="label reveal" style="display:block;margin-bottom:16px;">Member voices</span>
+        <h2 class="reveal d1" style="font-family:var(--font-display);font-weight:300;font-size:clamp(34px,4vw,52px);color:var(--charcoal);" id="testi-heading">What it feels like<br>to <em>stop worrying.</em></h2>
+      </div>
+      <div class="testi-grid">
+
+        <blockquote class="testi-card testi-card-large reveal">
+          <div class="testi-open" aria-hidden="true">"</div>
+          <p class="testi-body">We bought a home on Orcas Island as a retirement retreat. We live in Arizona. Before Praesidio, every winter was a source of anxiety — burst pipes, rodent damage, a deck that rotted because no one caught the water intrusion. Now I receive a monthly report, I know exactly what's been done, and I arrive to a home that's been genuinely looked after. It has changed our relationship with that property entirely.</p>
+          <div class="testi-rule" aria-hidden="true"></div>
+          <div class="testi-name">Richard &amp; Nancy F.</div>
+          <div class="testi-loc">Orcas Island · Estate Member · Arizona primary residence</div>
+        </blockquote>
+
+        <div style="display:flex;flex-direction:column;gap:2px;background:var(--rule);">
+          <blockquote class="testi-card testi-small reveal d1">
+            <div class="testi-open" aria-hidden="true">"</div>
+            <p class="testi-body">I called at 10 PM on a Friday. By 11:30 there was a plumber on-site, the water was shut off, and I was getting texts with photos. That response is simply not available anywhere else in this region.</p>
+            <div class="testi-rule" aria-hidden="true"></div>
+            <div class="testi-name">Jonathan W.</div>
+            <div class="testi-loc">Bellingham · Premier Member</div>
+          </blockquote>
+          <blockquote class="testi-card testi-small reveal d2">
+            <div class="testi-open" aria-hidden="true">"</div>
+            <p class="testi-body">The annual capital plan alone was worth twelve months of membership fees. We had no idea our HVAC was three years from end-of-life. We budgeted for it, replaced it on our schedule, and avoided an emergency replacement at twice the cost.</p>
+            <div class="testi-rule" aria-hidden="true"></div>
+            <div class="testi-name">Ellen M.</div>
+            <div class="testi-loc">Anacortes · Estate Member</div>
+          </blockquote>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         CTA
+    ══════════════════════════════ -->
+    <section class="about-cta" id="contact" aria-labelledby="cta-heading">
+      <div class="about-cta-inner">
+        <span class="label reveal" style="display:block;margin-bottom:20px;">Begin the conversation</span>
+        <h2 class="cta-heading reveal d1" id="cta-heading">
+          Your home deserves<br>someone who <em>cares.</em>
+        </h2>
+        <p class="cta-body reveal d2">
+          We begin every relationship with a no-obligation, no-cost consultation at your property. We learn your home. We recommend the right tier honestly. And if Praesidio isn't the right fit, we'll tell you.
+        </p>
+        <div class="cta-actions reveal d3">
+          <a href="mailto:hello@praesidiomanagement.com?subject=Consultation%20Request" class="btn-cta btn-cta-gold">Request a Consultation</a>
+          <a href="pricing.html" class="btn-cta btn-cta-outline">View Membership Plans</a>
+        </div>
+        <p style="margin-top:32px;font-family:var(--font-label);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(253,252,250,.25);" class="reveal d4">
+          hello@praesidiomanagement.com &nbsp;·&nbsp; (360) 555-0192 &nbsp;·&nbsp; Bellingham, WA
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo-name">Praesidio</div>
+          <div class="footer-logo-tag">Home Management</div>
+          <p class="footer-tagline">Elite, subscription-based home management for luxury residences throughout Northwest Washington.</p>
+          <div class="footer-contact">
+            <a href="tel:+13605550192">(360) 555-0192</a>
+            <a href="mailto:hello@praesidiomanagement.com">hello@praesidiomanagement.com</a>
+            <span style="font-family:var(--font-label);font-size:10px;letter-spacing:.14em;color:rgba(253,252,250,.3);">Bellingham, Washington 98225</span>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-links">
+            <li><a href="about.html">Our story</a></li>
+            <li><a href="about.html#values-heading">Our values</a></li>
+            <li><a href="about.html#standards-heading">Vendor standards</a></li>
+            <li><a href="about.html#approach-heading">How we work</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Services</div>
+          <ul class="footer-links">
+            <li><a href="services.html#essential">Essential</a></li>
+            <li><a href="services.html#premier">Premier</a></li>
+            <li><a href="services.html#estate">Estate</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Areas Served</div>
+          <ul class="footer-links">
+            <li><a href="index.html#areas">Bellingham</a></li>
+            <li><a href="index.html#areas">Whatcom County</a></li>
+            <li><a href="index.html#areas">San Juan Islands</a></li>
+            <li><a href="index.html#areas">Skagit County</a></li>
+            <li><a href="index.html#areas">Island County</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2025 Praesidio Management LLC. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
+
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => io.observe(el));
+
+    // Immediately fire hero elements
+    document.querySelectorAll('.about-hero .reveal').forEach(el => setTimeout(() => el.classList.add('visible'), 150));
+
+    const hamburger   = document.getElementById('hamburger');
+    const mobileNav   = document.getElementById('mobileNav');
+    const mobileClose = document.getElementById('mobileNavClose');
+    hamburger.addEventListener('click', () => { mobileNav.classList.add('open'); hamburger.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; });
+    const closeNav = () => { mobileNav.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; };
+    mobileClose.addEventListener('click', closeNav);
+    mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+  </script>
+</body>
+</html>
