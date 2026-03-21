@@ -1184,7 +1184,11 @@
 
         <!-- Waitlist form -->
         <form id="waitlistForm" class="reveal reveal-delay-3" novalidate
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
           style="background:rgba(253,252,250,.04);border:1px solid rgba(168,145,90,.25);overflow:hidden;">
+          <input type="hidden" name="_replyto" id="hidden-replyto" value="">
+          <input type="hidden" name="_subject" id="hidden-subject" value="Praesidio Waitlist Submission">
 
           <div style="padding:24px 36px 20px;border-bottom:1px solid rgba(168,145,90,.15);">
             <span style="font-family:var(--font-label);font-size:8px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);">Request a consultation</span>
@@ -1379,54 +1383,63 @@
       });
     });
 
-    // Waitlist form
-    const form       = document.getElementById('waitlistForm');
-    const successBox = document.getElementById('wl-success');
-    const emailErr   = document.getElementById('email-error');
-    const submitBtn  = document.getElementById('wl-submit');
+    // Waitlist form — Formspree
+    var wlForm     = document.getElementById('waitlistForm');
+    var wlSuccess  = document.getElementById('wl-success');
+    var wlEmailErr = document.getElementById('email-error');
+    var wlBtn      = document.getElementById('wl-submit');
 
-    if (form) {
-      form.addEventListener('submit', function(e) {
+    if (wlForm) {
+      wlForm.addEventListener('submit', function(e) {
         e.preventDefault();
-
-        const emailVal = document.getElementById('wl-email').value.trim();
+        var emailVal = document.getElementById('wl-email').value.trim();
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
-          emailErr.style.display = 'block';
+          wlEmailErr.style.display = 'block';
           document.getElementById('wl-email').focus();
           return;
         }
-        emailErr.style.display = 'none';
-
-        const name    = document.getElementById('wl-name').value.trim()    || '—';
-        const phone   = document.getElementById('wl-phone').value.trim()   || '—';
-        const address = document.getElementById('wl-address').value.trim() || '—';
-        const service = document.getElementById('wl-service').value        || '—';
-
-        const subject = encodeURIComponent('Praesidio Waitlist — ' + (name !== '—' ? name : emailVal));
-        const body    = encodeURIComponent(
-          'New waitlist submission\n\n' +
-          'Name:    ' + name    + '\n' +
-          'Email:   ' + emailVal + '\n' +
-          'Phone:   ' + phone   + '\n' +
-          'Address: ' + address + '\n' +
-          'Service: ' + service + '\n\n' +
-          '---\nSent from praesidiomanagement.com'
-        );
-
-        submitBtn.textContent = 'Sending\u2026';
-        submitBtn.disabled    = true;
-
-        window.location.href = 'mailto:aaron@praesidiomanagement.com?subject=' + subject + '&body=' + body;
-
-        setTimeout(() => {
-          form.style.display       = 'none';
-          successBox.style.display = 'block';
-        }, 700);
+        wlEmailErr.style.display = 'none';
+        var name = document.getElementById('wl-name').value.trim() || '';
+        document.getElementById('hidden-replyto').value = emailVal;
+        document.getElementById('hidden-subject').value = 'Praesidio Waitlist \u2014 ' + (name || emailVal);
+        wlBtn.textContent   = 'Sending\u2026';
+        wlBtn.disabled      = true;
+        wlBtn.style.opacity = '0.7';
+        fetch(wlForm.action, {
+          method: 'POST',
+          body: new FormData(wlForm),
+          headers: { 'Accept': 'application/json' }
+        }).then(function(res) {
+          if (res.ok) {
+            wlForm.style.display    = 'none';
+            wlSuccess.style.display = 'block';
+          } else {
+            res.json().then(function(d) {
+              var msg = d.errors ? d.errors.map(function(x){return x.message;}).join(', ') : 'Something went wrong. Please email us directly.';
+              showWlError(msg);
+            }).catch(function() { showWlError('Something went wrong. Please email us directly.'); });
+          }
+        }).catch(function() {
+          showWlError('Could not send \u2014 please email aaron@praesidiomanagement.com directly.');
+        }).then(function() {
+          wlBtn.disabled      = false;
+          wlBtn.style.opacity = '1';
+          wlBtn.textContent   = 'Join the Waitlist';
+        });
       });
-
-      document.getElementById('wl-email').addEventListener('input', () => {
-        emailErr.style.display = 'none';
+      document.getElementById('wl-email').addEventListener('input', function() {
+        wlEmailErr.style.display = 'none';
       });
+    }
+    function showWlError(msg) {
+      var el = document.getElementById('wl-send-error');
+      if (!el) {
+        el = document.createElement('p');
+        el.id = 'wl-send-error';
+        el.style.cssText = 'font-size:12px;color:#C4A96E;padding:10px 36px 0;font-weight:300;';
+        wlForm.appendChild(el);
+      }
+      el.textContent = msg;
     }
   </script>
 </body>
